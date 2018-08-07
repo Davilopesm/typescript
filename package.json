@@ -1,0 +1,19 @@
+{
+  "name": "postgree",
+  "version": "1.0.0",
+  "description": "",
+  "typings": "dist/index",
+  "scripts": {
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/app.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "knex": "^0.15.2",
+    "pg": "^7.4.3"
+  }
+}
