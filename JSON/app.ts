@@ -1,5 +1,5 @@
 import express = require('express');
-import {router as apiRoute} from './routes/api/todo';
+import apiRoute from './routes/api/todo';
 import bodyParser = require('body-parser');
 const app = express();
 
