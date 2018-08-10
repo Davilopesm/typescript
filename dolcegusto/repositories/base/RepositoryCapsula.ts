@@ -6,7 +6,7 @@ const table = 'capsulas';
   
 
 export default class RepositoryCapsulas implements Read<Capsula>, Write<Capsula> {
-
+   
     writeInsert(name: String, instrucoesPreparo: String, tempoPreparo: String, id_tipo: number): Promise<Capsula> {
         return db.insert({name: name, instrucoes_preparo: instrucoesPreparo, tempo_preparo: tempoPreparo, id_tipo: id_tipo}).into(table);
     }
@@ -30,5 +30,6 @@ export default class RepositoryCapsulas implements Read<Capsula>, Write<Capsula>
     findOne(id: number): Promise<Capsula> {
         return db.select().from(table).where({ id: id });	
     }
+
 
 }

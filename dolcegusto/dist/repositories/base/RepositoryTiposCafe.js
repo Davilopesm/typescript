@@ -6,12 +6,7 @@ var RepositoryTiposCafe = (function () {
     function RepositoryTiposCafe() {
     }
     RepositoryTiposCafe.prototype.writeInsert = function (name) {
-        try {
-            return databaseConnection_1.knex.insert({ name: name }).into(table);
-        }
-        catch (Error) {
-            throw (Error);
-        }
+        return databaseConnection_1.knex.insert({ name: name }).into(table);
     };
     RepositoryTiposCafe.prototype.writeDelete = function (id) {
         return databaseConnection_1.knex(table).where({ id: id }).del();

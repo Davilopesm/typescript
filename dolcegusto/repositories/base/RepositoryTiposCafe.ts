@@ -6,11 +6,7 @@ const table = 'tipos_cafe';
 export default class RepositoryTiposCafe implements Read<Tipo>, Write<Tipo> {
     
     writeInsert(name: String): Promise<Tipo> {
-        try{
-            return db.insert({name: name}).into(table);
-        } catch (Error){
-            throw (Error); 
-        }
+        return db.insert({name: name}).into(table);
     }
 
     writeDelete( id: number): Promise<Tipo> {
@@ -28,7 +24,8 @@ export default class RepositoryTiposCafe implements Read<Tipo>, Write<Tipo> {
     }
 
     findOne(id: number): Promise<Tipo> {
-        return db.select().from(table).where({ id: id });	
+        return db.select().from(table).where({ id: id });
+    
     }
 
 }

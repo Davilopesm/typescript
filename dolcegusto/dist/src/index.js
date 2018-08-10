@@ -2,9 +2,9 @@
 exports.__esModule = true;
 var express = require("express");
 var bodyParser = require("body-parser");
-var tipos_1 = require("../entities/tipos/tipos");
-var capsulas_1 = require("../entities/capsulas/capsulas");
-var capsula_1 = require("../entities/capsulas/capsula");
+var tipos_1 = require("../routes/tipos/tipos");
+var capsulas_1 = require("../routes/capsulas/capsulas");
+var capsula_1 = require("../routes/capsulas/capsula");
 var app = express();
 var port = process.env.PORT || 3000;
 app.use(bodyParser.json());
