@@ -1,5 +1,5 @@
 # typescript
 Learning TypeScript
 
-npm i //
+npm i <br/>
 npm run watch
