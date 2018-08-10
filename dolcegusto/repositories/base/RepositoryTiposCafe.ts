@@ -1,28 +1,33 @@
 import Read from '../interface/read';
 import Write from '../interface/write';
 import {knex as db} from './databaseConnection';
+import Tipo from '../../entities/Tipo'
 const table = 'tipos_cafe';
-export default class RepositoryTiposCafe<T> implements Read<T>, Write<T> {
+export default class RepositoryTiposCafe implements Read<Tipo>, Write<Tipo> {
     
-    writeInsert(name: String): Promise<T> {
-        return db.insert({name: name}).into(table);
+    writeInsert(name: String): Promise<Tipo> {
+        try{
+            return db.insert({name: name}).into(table);
+        } catch (Error){
+            throw (Error); 
+        }
     }
 
-    writeDelete( id: number): Promise<T> {
+    writeDelete( id: number): Promise<Tipo> {
         return db(table).where({id: id}).del();
     }
 
-    writeUpdate(id: number, name: String): Promise<T> {
+    writeUpdate(id: number, name: String): Promise<Tipo> {
         return db(table).where({ id: id }).update({
-            name: name || null
+            name: name
         });
     }
 
-    find(): Promise<T[]> {
+    find(): Promise<Tipo[]> {
         return db.select().from(table);
     }
 
-    findOne(id: number): Promise<T> {
+    findOne(id: number): Promise<Tipo> {
         return db.select().from(table).where({ id: id });	
     }
 

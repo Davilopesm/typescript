@@ -1,7 +1,7 @@
 import apiRoute from '../../repositories/base/RepositoryCapsula';
 import express = require('express');
 const router = express.Router();
-var repository: apiRoute<any> = new apiRoute();
+var repository: apiRoute = new apiRoute();
 
 router.get('/:id', async (req, res) => {
   repository.find(req.params.id).then((data:any) => {

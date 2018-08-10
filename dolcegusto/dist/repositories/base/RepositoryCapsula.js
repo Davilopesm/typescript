@@ -13,9 +13,9 @@ var RepositoryCapsulas = (function () {
     };
     RepositoryCapsulas.prototype.writeUpdate = function (id, name, instrucoesPreparo, tempoPreparo) {
         return databaseConnection_1.knex(table).where({ id: id }).update({
-            name: name || null,
-            instrucoes_preparo: instrucoesPreparo || null,
-            tempo_preparo: tempoPreparo || null
+            name: name,
+            instrucoes_preparo: instrucoesPreparo,
+            tempo_preparo: tempoPreparo
         });
     };
     RepositoryCapsulas.prototype.find = function (id) {

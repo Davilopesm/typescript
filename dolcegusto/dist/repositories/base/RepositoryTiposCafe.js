@@ -6,14 +6,19 @@ var RepositoryTiposCafe = (function () {
     function RepositoryTiposCafe() {
     }
     RepositoryTiposCafe.prototype.writeInsert = function (name) {
-        return databaseConnection_1.knex.insert({ name: name }).into(table);
+        try {
+            return databaseConnection_1.knex.insert({ name: name }).into(table);
+        }
+        catch (Error) {
+            throw (Error);
+        }
     };
     RepositoryTiposCafe.prototype.writeDelete = function (id) {
         return databaseConnection_1.knex(table).where({ id: id }).del();
     };
     RepositoryTiposCafe.prototype.writeUpdate = function (id, name) {
         return databaseConnection_1.knex(table).where({ id: id }).update({
-            name: name || null
+            name: name
         });
     };
     RepositoryTiposCafe.prototype.find = function () {

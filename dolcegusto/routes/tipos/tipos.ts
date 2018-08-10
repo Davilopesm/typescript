@@ -1,7 +1,7 @@
 import apiRoute from '../../repositories/base/RepositoryTiposCafe';
 import express = require('express');
 const router = express.Router();
-var teste: apiRoute<any> = new apiRoute();
+var teste: apiRoute = new apiRoute();
 
 router.get('/', async (req, res) => {
   teste.find().then((data:any) => {
