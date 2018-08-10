@@ -1,4 +1,4 @@
-# typescript
+# Typescript
 Learning TypeScript
 
 npm i <br/>
