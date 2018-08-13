@@ -67,6 +67,14 @@ router.post('/', validatorTipo_1["default"].postCapsula, function (req, res) { r
         return [2];
     });
 }); });
+router.patch('/:id', validatorTipo_1["default"].putCapsula, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        teste.writeUpdate(req.params.id, req.body.name).then(function () {
+            res.send("Atualizado com sucesso");
+        });
+        return [2];
+    });
+}); });
 router.put('/:id', validatorTipo_1["default"].putCapsula, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         teste.writeUpdate(req.params.id, req.body.name).then(function () {

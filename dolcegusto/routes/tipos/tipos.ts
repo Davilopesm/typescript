@@ -24,6 +24,12 @@ router.post('/', validator.postCapsula, async (req, res) => {
   });
 });
 
+router.patch('/:id', validator.putCapsula, async (req, res) => {
+  teste.writeUpdate(req.params.id, req.body.name).then(() => {
+    res.send("Atualizado com sucesso");
+  })
+})
+
 router.put('/:id', validator.putCapsula, async (req, res) => {
   teste.writeUpdate(req.params.id, req.body.name).then(() => {
     res.send("Atualizado com sucesso");

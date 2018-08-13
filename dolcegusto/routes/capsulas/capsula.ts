@@ -22,6 +22,12 @@ router.put('/:id', validator.putCapsula, async (req, res) => {
   });
 });
 
+router.patch('/:id', validator.putCapsula, async (req, res) => {
+  repository.writeUpdate(req.params.id, req.body.name, req.body.instrucoes_preparo, req.body.tempo_preparo).then(() => {
+    res.send("Atualizado com sucesso");
+  });
+});
+
 router.delete('/:id', validator.deleteCapsula, async (req, res) => {
   repository.writeDelete(req.params.id).then(() => {
     res.send("Deletado com sucesso");

@@ -65,6 +65,14 @@ router.put('/:id', validatorCapsula_1["default"].putCapsula, function (req, res)
         return [2];
     });
 }); });
+router.patch('/:id', validatorCapsula_1["default"].putCapsula, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        repository.writeUpdate(req.params.id, req.body.name, req.body.instrucoes_preparo, req.body.tempo_preparo).then(function () {
+            res.send("Atualizado com sucesso");
+        });
+        return [2];
+    });
+}); });
 router["delete"]('/:id', validatorCapsula_1["default"].deleteCapsula, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         repository.writeDelete(req.params.id).then(function () {
