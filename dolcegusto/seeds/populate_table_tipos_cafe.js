@@ -1,6 +1,6 @@
 exports.seed = async function(knex, Promise) {
-  await knex('tipos_cafe2').del();
-  return knex('tipos_cafe2').insert([
+  //await knex('tipos_cafe').del();
+  return knex('tipos_cafe').insert([
     {name: 'Espresso'},
     {name: 'Cafe da Manha' },
     {name: 'Cappucino & Latte' },
