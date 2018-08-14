@@ -1,5 +1,5 @@
 exports.up = async function(knex, Promise) {
-  return knex.schema.createTable("capsulas2", (table) => {
+  return knex.schema.createTable("capsulas", (table) => {
       table.increments();
       table.string('name');
       table.string('instrucoes_preparo');
@@ -10,6 +10,6 @@ exports.up = async function(knex, Promise) {
 
 exports.down = function(knex, Promise) {
   return Promise.all([
-    knex.schema.dropTableIfExists("capsulas2")
+    knex.schema.dropTableIfExists("capsulas")
   ]);
 };
