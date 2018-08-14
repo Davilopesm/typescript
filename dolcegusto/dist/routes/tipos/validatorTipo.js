@@ -53,7 +53,7 @@ var Validator = (function () {
             });
         });
     };
-    Validator.postCapsula = function (req, res, next) {
+    Validator.postTipo = function (req, res, next) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2, Joi.validate({
@@ -67,7 +67,7 @@ var Validator = (function () {
             });
         });
     };
-    Validator.putCapsula = function (req, res, next) {
+    Validator.putTipo = function (req, res, next) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2, Joi.validate({
@@ -85,7 +85,7 @@ var Validator = (function () {
             });
         });
     };
-    Validator.deleteCapsula = function (req, res, next) {
+    Validator.deleteTipo = function (req, res, next) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2, Joi.validate({

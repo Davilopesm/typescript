@@ -90,6 +90,26 @@ var Validator = (function () {
             });
         });
     };
+    Validator.patchCapsula = function (req, res, next) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, Joi.validate({
+                        body: req.body,
+                        params: req.params
+                    }, {
+                        body: Joi.object().keys({
+                            name: Joi.string().min(4).max(50),
+                            instrucoes_preparo: Joi.string().min(4).max(100),
+                            tempo_preparo: Joi.string().min(4).max(100)
+                        }).required(),
+                        params: Joi.object().keys({
+                            id: Joi.number().min(1).required()
+                        }).required()
+                    })
+                        .then(function () { return next(); })["catch"](function (err) { return next(err); })];
+            });
+        });
+    };
     Validator.deleteCapsula = function (req, res, next) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {

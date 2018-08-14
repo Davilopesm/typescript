@@ -31,5 +31,4 @@ export default class RepositoryCapsulas implements Read<Capsula>, Write<Capsula>
         return db.select().from(table).where({ id: id });	
     }
 
-
 }

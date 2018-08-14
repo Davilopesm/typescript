@@ -59,7 +59,7 @@ router.get('/:id', validatorTipo_1["default"].getTipo, function (req, res) { ret
         return [2];
     });
 }); });
-router.post('/', validatorTipo_1["default"].postCapsula, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+router.post('/', validatorTipo_1["default"].postTipo, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         teste.writeInsert(req.body.name).then(function () {
             res.send("Adicionado com sucesso");
@@ -67,7 +67,7 @@ router.post('/', validatorTipo_1["default"].postCapsula, function (req, res) { r
         return [2];
     });
 }); });
-router.patch('/:id', validatorTipo_1["default"].putCapsula, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+router.patch('/:id', validatorTipo_1["default"].putTipo, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         teste.writeUpdate(req.params.id, req.body.name).then(function () {
             res.send("Atualizado com sucesso");
@@ -75,7 +75,7 @@ router.patch('/:id', validatorTipo_1["default"].putCapsula, function (req, res) 
         return [2];
     });
 }); });
-router.put('/:id', validatorTipo_1["default"].putCapsula, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+router.put('/:id', validatorTipo_1["default"].putTipo, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         teste.writeUpdate(req.params.id, req.body.name).then(function () {
             res.send("Atualizado com sucesso");
@@ -83,7 +83,7 @@ router.put('/:id', validatorTipo_1["default"].putCapsula, function (req, res) { 
         return [2];
     });
 }); });
-router["delete"]('/:id', validatorTipo_1["default"].deleteCapsula, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+router["delete"]('/:id', validatorTipo_1["default"].deleteTipo, function (req, res) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         teste.writeDelete(req.params.id).then(function () {
             res.send("Deletado com sucesso");
