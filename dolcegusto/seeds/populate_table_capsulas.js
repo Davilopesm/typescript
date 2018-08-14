@@ -1,5 +1,5 @@
 exports.seed = async function(knex, Promise) {
-  await knex('capsulas').del();
+  //await knex('capsulas').del();
   return knex('capsulas').insert([
     {name: 'Caffè Matinal', instrucoes_preparo: 'Acione a alavanca para a posição de fluxo quente', tempo_preparo: '21 segundos', id_tipo: 2 },
     {name: 'Duo Matinal', instrucoes_preparo: 'Acione a alavanca para a posição de fluxo quente', tempo_preparo: '28 (Cafe Au Lait) e  21 segundos (Caffè Matinal)', id_tipo: 2 },
